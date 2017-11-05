@@ -1,0 +1,21 @@
+{
+  "name": "jepser-static",
+  "version": "1.0.0",
+  "description": "Static website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "author": "Jepser",
+  "license": "ISC",
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.3.0",
+    "contentful": "^4.6.2",
+    "next": "^4.1.4",
+    "react": "16",
+    "react-dom": "16",
+    "styled-components": "^2.2.3"
+  }
+}
