@@ -1,18 +1,31 @@
 import Link from 'next/link'
 
-const linkStyle = {
-  marginRight: 15
-}
+import Logo from '../Logo'
+import {
+  Menu,
+  Item,
+  Wrap,
+  MenuWrap
+} from './styled-components'
 
-const Header = () => (
-    <div>
-        <Link href="/">
-          <a style={linkStyle}>Home</a>
+const Header = (props) => (
+  <Wrap>
+    <MenuWrap>
+      <Link href="/">
+        <Logo />
+      </Link>
+        
+        <Link href="/labs">
+          <Item color={props.color}>Articles</Item>
         </Link>
-        <Link href="/bio">
-          <a style={linkStyle}>Bio</a>
+        <Link href="/labs">
+          <Item color={props.color}>Labs</Item>
         </Link>
-    </div>
+        <Link href="/labs">
+          <Item color={props.color}>Contact</Item>
+        </Link>
+    </MenuWrap>
+  </Wrap>
 )
 
 export default Header
