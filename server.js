@@ -14,7 +14,13 @@ const routes = require('./routes')
 app.prepare().then(() => {
   const server = express()
 
+  server.get('/(|article|labs)/:slug', (req, res) => {
+    const params = { slug: req.params.slug, type: req.params.type }
+    return app.render(req, res, '/labsArticle', params)
+  })
+
   server.get('*', (req, res) => {
+
     const parsedUrl = parse(req.url, true)
     const { pathname, query } = parsedUrl
     const route = routes[pathname]

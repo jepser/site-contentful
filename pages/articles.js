@@ -4,9 +4,9 @@ import Link from 'next/link'
 import contentClient from '../transport/contentful'
 import Page from '../layouts/base'
 
-import Labs, {
+import {
   Preview
-} from '../components/Labs'
+} from '../components/Articles'
 
 
 const Index = (props) => {
@@ -14,12 +14,14 @@ const Index = (props) => {
   const {
     items
   } = props.data
+
+  console.log(props)
   
   return(
-    <Page title='Labs - Jepser Bernardino' theme="dark">
+    <Page title='Artículos - Jepser Bernardino' theme="dark">
       {
         items.map(item => (
-          <Preview key={item.sys.id} {...item} />  
+          <Preview key={item.sys.id} {...item} />
         ))
       }
     </Page>
@@ -28,7 +30,7 @@ const Index = (props) => {
 
 Index.getInitialProps = async () => {
 
-  const data = await contentClient.getEntries({ content_type: 'labs'})
+  const data = await contentClient.getEntries({ content_type: 'post'})
   return { data }
 }
 

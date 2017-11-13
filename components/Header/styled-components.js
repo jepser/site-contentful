@@ -13,8 +13,8 @@ export const MenuWrap = styled.div`
 export const Item = styled.a`
   float: left;
   clear: left;
-  background: white;
+  background: ${props => props.background ? props.background : 'white'};
   padding: 10px 10px 10px 40px;
   margin: 5px 0;
-  color: #333;
+  color: ${props => props.color ? props.color : '#333'};
 `

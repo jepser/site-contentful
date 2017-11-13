@@ -8,24 +8,34 @@ import {
   MenuWrap
 } from './styled-components'
 
-const Header = (props) => (
-  <Wrap>
-    <MenuWrap>
-      <Link href="/">
-        <Logo />
-      </Link>
-        
-        <Link href="/labs">
-          <Item color={props.color}>Articles</Item>
+const Header = ({theme}) => {
+  let color = '#333'
+  let background = 'white'
+  if (theme === 'dark') {
+    color = 'white'
+    background = 'transparent'
+  }
+  return(
+    <Wrap>
+      <MenuWrap>
+        <Link href="/">
+          <div>
+            <Logo color={color} background={background} />
+          </div>
         </Link>
-        <Link href="/labs">
-          <Item color={props.color}>Labs</Item>
-        </Link>
-        <Link href="/labs">
-          <Item color={props.color}>Contact</Item>
-        </Link>
-    </MenuWrap>
-  </Wrap>
-)
+          
+          <Link href="/articles">
+            <Item color={color} background={background}>Artículos</Item>
+          </Link>
+          <Link href="/labs">
+            <Item color={color} background={background}>Labs</Item>
+          </Link>
+          <Link href="/labs">
+            <Item color={color} background={background}>Contacto</Item>
+          </Link>
+      </MenuWrap>
+    </Wrap>
+  )
+}
 
 export default Header

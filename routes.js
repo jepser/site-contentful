@@ -1,7 +1,7 @@
 module.exports = () => {
   return {
     '/': { page: '/' },
-    '/404': { page: '/404' },
-    '/bio': { page: '/bio' }
+    '/labs': { page: '/labs' },
+    '/articles': { page: '/articles'}
   }
 }
