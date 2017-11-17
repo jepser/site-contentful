@@ -14,9 +14,14 @@ const routes = require('./routes')
 app.prepare().then(() => {
   const server = express()
 
-  server.get('/(|article|labs)/:slug', (req, res) => {
-    const params = { slug: req.params.slug, type: req.params.type }
-    return app.render(req, res, '/labsArticle', params)
+  server.get('/:type/:slug', (req, res, next) => {
+    const type = req.params.type
+    if(['labs', 'articles'].indexOf(type) !== -1) {
+      const params = { slug: req.params.slug, type: type }
+      return app.render(req, res, '/article', params)
+    } else {
+      next()
+    }
   })
 
   server.get('*', (req, res) => {

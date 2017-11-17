@@ -3,3 +3,13 @@ export const BreakLine = (string) => {
     return <span key={key}>{item}<br/></span>
   })
 }
+
+export const canUseDOM = !!(
+  typeof window !== 'undefined' &&
+  window.document &&
+  window.document.createElement
+)
+
+export const normalizeId = string => {
+  return string.normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(' ', '-').toLowerCase()
+}

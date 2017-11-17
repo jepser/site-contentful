@@ -8,7 +8,6 @@ import {
   Preview
 } from '../components/Articles'
 
-
 const Index = (props) => {
 
   const {
@@ -19,6 +18,7 @@ const Index = (props) => {
   
   return(
     <Page title='Artículos - Jepser Bernardino' theme="dark">
+
       {
         items.map(item => (
           <Preview key={item.sys.id} {...item} />
@@ -30,7 +30,7 @@ const Index = (props) => {
 
 Index.getInitialProps = async () => {
 
-  const data = await contentClient.getEntries({ content_type: 'post'})
+  const data = await contentClient.getEntries({ content_type: 'articles'})
   return { data }
 }
 

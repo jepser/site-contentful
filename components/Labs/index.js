@@ -7,7 +7,13 @@ import {
   Excerpt,
   Labs,
   Content,
-  Item
+  Item,
+  ProjectLink,
+  ContinueReading,
+  Meta,
+  MainTitle,
+  TitleContent,
+  TitleWrap
 } from './styled-components'
 
 export const Preview = (props) => {
@@ -15,29 +21,44 @@ export const Preview = (props) => {
     title,
     excerpt,
     slug,
-    color
+    color,
+    projectUrl
   } = props.fields
 
   const {
     createdAt,
     id
   } = props.sys
-  const publishedDate = moment(createdAt).format('MMMM Do, YYYY')
+  const publishedDate = moment(createdAt).locale('es').format('MMMM Do, YYYY')
   return(
     <Wrap color={color}>
       <Content>
         <Item>
           <PublishDate>{publishedDate}</PublishDate>
           <Title>
-            <Link href={`/labsArticle?slug=${slug}&type=labs`} as={`/labs/${slug}`}>
+            <Link href={`/article?slug=${slug}&type=labs`} as={`/labs/${slug}`}>
               <a>{title}</a>
             </Link>
           </Title>
           <Excerpt>{excerpt}</Excerpt>
+          <Meta>
+            <ProjectLink href={`${projectUrl}`}>Ver proyecto</ProjectLink>
+            <Link href={`/article?slug=${slug}&type=labs`} as={`/labs/${slug}`}>
+              <ContinueReading>Ver historia</ContinueReading>
+            </Link>
+          </Meta>
         </Item>
       </Content>
     </Wrap>
   )
 }
+
+export const ArticleTitle = (props) => (
+  <TitleWrap color={props.color}>
+    <TitleContent>
+      <MainTitle>{props.children}</MainTitle>
+    </TitleContent>
+  </TitleWrap>
+)
 
 export default Labs

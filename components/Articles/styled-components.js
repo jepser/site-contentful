@@ -36,6 +36,7 @@ export const Labs = styled.div`
 `
 
 export const Content = styled(DefaultContent)`
+  background-color: #333;
   display: flex;
   align-items: center;
   min-height: 80vh;

@@ -6,11 +6,14 @@ import Page from '../layouts/base'
 import Content from '../components/Content'
 import {
   Link,
-  Paragraph
+  Paragraph,
+  ImageContainer,
+  Image,
+  Heading
 } from '../components/Content/styled-components'
 import {
   ArticleTitle
-} from '../components/Labs/styled-components'
+} from '../components/Labs'
 
 const Index = (props) => {
 
@@ -24,14 +27,20 @@ const Index = (props) => {
     },
     'paragraph': (props) => {
       return <Paragraph {...props} />
+    },
+    'image': (props) => {
+      return <Image {...props} align={props.align} />
+    },
+    'heading': (props) => {
+      return <Heading {...props} />
     }
   }
 
   return(
     <Page title={`${fields.title} - Jepser Bernardino`}>
+      <ArticleTitle color={fields.color || '#333'}>{fields.title}</ArticleTitle>
       <Content>
-      <ArticleTitle>{fields.title}</ArticleTitle>
-      <ReactMarkdown source={fields.content} renderers={renderers} />
+        <ReactMarkdown source={fields.content} renderers={renderers} />
       </Content>
     </Page>
   )

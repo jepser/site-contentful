@@ -22,14 +22,14 @@ export const Preview = (props) => {
     createdAt,
     id
   } = props.sys
-  const publishedDate = moment(createdAt).format('MMMM Do, YYYY')
+  const publishedDate = moment(createdAt).locale('es').format('MMMM Do, YYYY')
   return(
-    <Wrap color={color}>
+    <Wrap color={color || '#333'}>
       <Content>
         <Item>
           <PublishDate>{publishedDate}</PublishDate>
           <Title>
-            <Link href={`/labsArticle?slug=${slug}&type=post`} as={`/articles/${slug}`}>
+            <Link href={`/labsArticle?slug=${slug}&type=articles`} as={`/articles/${slug}`}>
               <a>{title}</a>
             </Link>
           </Title>
