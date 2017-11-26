@@ -36,14 +36,14 @@ export const Preview = (props) => {
         <Item>
           <PublishDate>{publishedDate}</PublishDate>
           <Title>
-            <Link href={`/article?slug=${slug}&type=labs`} as={`/labs/${slug}`}>
+            <Link href={`/lab?slug=${slug}&type=labs`} as={`/labs/${slug}`}>
               <a>{title}</a>
             </Link>
           </Title>
           <Excerpt>{excerpt}</Excerpt>
           <Meta>
             <ProjectLink href={`${projectUrl}`}>Ver proyecto</ProjectLink>
-            <Link href={`/article?slug=${slug}&type=labs`} as={`/labs/${slug}`}>
+            <Link href={`/lab?slug=${slug}&type=labs`} as={`/labs/${slug}`}>
               <ContinueReading>Ver historia</ContinueReading>
             </Link>
           </Meta>
@@ -54,7 +54,7 @@ export const Preview = (props) => {
 }
 
 export const ArticleTitle = (props) => (
-  <TitleWrap color={props.color}>
+  <TitleWrap color={props.color} background={props.background}>
     <TitleContent>
       <MainTitle>{props.children}</MainTitle>
     </TitleContent>

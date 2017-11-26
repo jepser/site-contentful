@@ -13,8 +13,24 @@ export const Title = styled.h2`
 `
 
 export const Wrap = styled.div`
+  position: relative;
   padding: 20px;
   background-color: ${props => props.color ? props.color : 'white'};
+  background-image: ${props => props.background ? `url(${props.background})` : 'none'};
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+
+  &::after {
+    display: block;
+    content: '';
+    background-color: rgba(0, 0, 0, .6);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
 `
 
 export const Excerpt = styled.p`
@@ -36,7 +52,8 @@ export const Labs = styled.div`
 `
 
 export const Content = styled(DefaultContent)`
-  background-color: #333;
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   min-height: 80vh;

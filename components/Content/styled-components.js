@@ -32,6 +32,26 @@ const ImageContent = styled.img`
   height: auto;
 `
 
+export const Code = styled.code`
+  display: inline-block;
+  padding: 0 5px;
+  background-color: #F1F1F1;
+  border-radius: 3px;
+  border: 1px solid #CCC;
+`
+
+export const Pre = styled.pre`
+  padding: 10px;
+  background-color: #F1F1F1;
+  border-radius: 3px;
+  border: 1px solid #CCC;
+  overflow: auto;
+`
+
+export const ListItem = styled.li`
+  margin-bottom: 5px;
+`
+
 export const Image = (props) => {
   return (
     <ImageWrap align={props.align}>

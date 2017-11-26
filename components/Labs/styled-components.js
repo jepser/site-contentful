@@ -51,6 +51,10 @@ export const Item = styled.div`
 
 export const TitleWrap = styled.div`
   background-color: ${props => props.color ? props.color : '#333'};
+  background-image: ${props => props.background ? `url(${props.background})` : 'none'};
+  background-size: cover;
+  background-position: center bottom;
+  background-attachment: fixed;
 `
 
 export const MainTitle = styled.h1`

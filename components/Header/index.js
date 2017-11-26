@@ -1,6 +1,5 @@
 import Link from 'next/link'
-// import typeformEmbed from '@typeform/embed'  
-
+import ActiveLink from '../ActiveLink'
 
 import Logo from '../Logo'
 import {
@@ -21,18 +20,6 @@ const Header = ({theme}) => {
     background = 'transparent'
   }
 
-  // const popup = typeformEmbed.makePopup('https://jepser.typeform.com/to/yQ1K0K', {
-  //   mode: 'popup'
-  // })
-
-  const handleClick = (e) => {
-    e.preventDefault()
-
-    console.log('asdfafds')
-
-    // popup.open()
-  }
-
   return(
     <Wrap>
       <MenuWrap>
@@ -41,14 +28,15 @@ const Header = ({theme}) => {
             <Logo color={color} background={background} />
           </div>
         </Link>
-          
-          <Link href="/articles">
-            <Item color={color} background={background}>Artículos</Item>
-          </Link>
-          <Link href="/labs">
-            <Item color={color} background={background}>Labs</Item>
-          </Link>
-          <Item color={color} onClick={handleClick} background={background}>Contacto</Item>
+          <ActiveLink href="/articles" Component={Item} color={color} background={background}>
+            Artículos
+          </ActiveLink>
+          <ActiveLink href="/labs" Component={Item} color={color} background={background}>
+            Labs
+          </ActiveLink>
+          <ActiveLink href="/contact" Component={Item} color={color} background={background}>
+            Contacto
+          </ActiveLink>
       </MenuWrap>
     </Wrap>
   )

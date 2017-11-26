@@ -11,5 +11,5 @@ export const canUseDOM = !!(
 )
 
 export const normalizeId = string => {
-  return string.normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(' ', '-').toLowerCase()
+  return string.normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/ /g, '-').toLowerCase()
 }

@@ -27,6 +27,7 @@ export const Spacer = styled.div`
 `
 
 export const Container = styled(Wrapper)`
+  min-height: 100vh;
   display: flex;
   align-items: center;
 `

@@ -15,8 +15,15 @@ export const Preview = (props) => {
     title,
     excerpt,
     slug,
-    color
+    color,
+    thumbnail
   } = props.fields
+
+  let coverImage = null
+
+  if(thumbnail) {
+    coverImage = thumbnail.fields.file.url
+  }
 
   const {
     createdAt,
@@ -24,12 +31,12 @@ export const Preview = (props) => {
   } = props.sys
   const publishedDate = moment(createdAt).locale('es').format('MMMM Do, YYYY')
   return(
-    <Wrap color={color || '#333'}>
+    <Wrap color={color || '#333'} background={coverImage}>
       <Content>
         <Item>
           <PublishDate>{publishedDate}</PublishDate>
           <Title>
-            <Link href={`/labsArticle?slug=${slug}&type=articles`} as={`/articles/${slug}`}>
+            <Link href={`/article?slug=${slug}&type=articles`} as={`/articles/${slug}`}>
               <a>{title}</a>
             </Link>
           </Title>
@@ -40,4 +47,4 @@ export const Preview = (props) => {
   )
 }
 
-export default Labs
+export default Preview
