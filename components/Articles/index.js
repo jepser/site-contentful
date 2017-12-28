@@ -31,8 +31,7 @@ export const Preview = (props) => {
   } = props.sys
   const publishedDate = moment(createdAt).locale('es').format('MMMM Do, YYYY')
   return(
-    <Wrap color={color || '#333'} background={coverImage}>
-      <Content>
+    <Wrap>
         <Item>
           <PublishDate>{publishedDate}</PublishDate>
           <Title>
@@ -42,7 +41,6 @@ export const Preview = (props) => {
           </Title>
           <Excerpt>{excerpt}</Excerpt>
         </Item>
-      </Content>
     </Wrap>
   )
 }

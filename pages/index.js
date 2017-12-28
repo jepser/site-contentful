@@ -1,7 +1,6 @@
 import fetch from 'isomorphic-fetch'
 import Link from 'next/link'
 
-import contentClient from '../transport/contentful'
 import Header from '../components/Header'
 import Page from '../layouts/base'
 
@@ -41,5 +40,6 @@ const Index = (props) => {
     </Page>
   )
 }
+
 
 export default Index

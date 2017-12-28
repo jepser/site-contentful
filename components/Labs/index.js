@@ -43,7 +43,7 @@ export const Preview = (props) => {
           <Excerpt>{excerpt}</Excerpt>
           <Meta>
             <ProjectLink href={`${projectUrl}`}>Ver proyecto</ProjectLink>
-            <Link href={`/article?slug=${slug}&type=labs`} as={`/labs/${slug}`}>
+            <Link href={`/article?slug=${slug}&type=labs`} as={`/labs/${slug}`} prefetch>
               <ContinueReading>Ver historia</ContinueReading>
             </Link>
           </Meta>

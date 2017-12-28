@@ -10,7 +10,17 @@ const Icon = styled(logo)`
   display: block;
   path {
     transition: fill .3s ease;
-    fill: ${props => props.color ? props.color: '#333'};
+    @media (min-width: 641px) {
+      path {
+        fill: ${props => props.color ? props.color: '#333'};
+      }
+    }
+  }
+
+  @media (min-width: 641px) {
+    path {
+      fill: ${props => props.color ? props.color: '#333'};
+    }
   }
 `
 

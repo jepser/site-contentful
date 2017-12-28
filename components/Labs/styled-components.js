@@ -15,6 +15,10 @@ export const Title = styled.h2`
   a {
     color: inherit;
   }
+
+  @media (max-width: 640px) {
+    font-size: 24px;
+  }
 `
 
 export const Wrap = styled.div`

@@ -4,6 +4,7 @@ import {default as Wrapper} from '../Content'
 export const Title = styled.h1`
   font-weight: normal;
   font-size: 36px;
+  margin: 0 0 20px;
 
   a {
     position: relative;
@@ -18,6 +19,10 @@ export const Title = styled.h1`
       background-color: white;
     }
   }
+
+  @media (max-width: 640px) {
+    font-size: 24px;
+  }
 `
 
 export const Spacer = styled.div`
@@ -30,6 +35,10 @@ export const Container = styled(Wrapper)`
   min-height: 100vh;
   display: flex;
   align-items: center;
+
+  @media (max-width: 640px) {
+    min-height: 0;
+  }
 `
 
 export const Wrap = styled.div`

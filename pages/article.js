@@ -12,7 +12,8 @@ import {
   Heading,
   Code,
   Pre,
-  ListItem
+  ListItem,
+  CtaLink
 } from '../components/Content/styled-components'
 import {
   ArticleTitle
@@ -23,6 +24,8 @@ const Index = (props) => {
   const {
     fields
   } = props.data
+
+  const pageColor = fields.color || '#333'
 
   const renderers = {
     'link': (props) => {
@@ -41,7 +44,12 @@ const Index = (props) => {
       return <ListItem {...props} />
     },
     'code': ({value, ...args}) => {
-      return <Pre {...args}>{value}</Pre>
+
+      if(args.language !== 'cta') {
+        return <Pre {...args}>{value}</Pre>
+      }
+      
+      return <CtaLink value={value} color={pageColor} />
     },    
     'inlineCode': (props) => {
       return <Code {...props} />
@@ -56,7 +64,7 @@ const Index = (props) => {
 
   return(
     <Page title={`${fields.title} - Jepser Bernardino`}>
-      <ArticleTitle color={fields.color || '#333'}  background={coverImage}>{fields.title}</ArticleTitle>
+      <ArticleTitle color={pageColor}  background={coverImage}>{fields.title}</ArticleTitle>
       <Content>
         <ReactMarkdown source={fields.content} renderers={renderers} />
       </Content>

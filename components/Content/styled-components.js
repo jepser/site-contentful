@@ -19,7 +19,24 @@ export const Link = styled.a`
   }
 `
 
+const LinkWrap = styled.div`
+  text-align: center;
+  padding: 10px 0;
+`
+
+const CtaAnchor = styled.a`
+  background-color: ${props => props.color};
+  color: white;
+  padding: 10px 45px;
+  font-size: 18px;
+  text-transform: uppercase;
+`
+
 export const Paragraph = styled.p`
+  a {
+    color: inherit;
+    border-bottom: 2px solid;
+  }
 `
 
 const ImageWrap = styled.span`
@@ -69,4 +86,15 @@ export const Heading = ({level, children}) => {
   const Title = BasicHeading.withComponent(`h${level}`)
 
   return <Title>{children}</Title>
+}
+
+export const CtaLink = ({value, color}) => {
+  const matchLink = /\[([^]+)\]\(([^]+)\)/g
+  const linkArgs = matchLink.exec(value)
+
+  return (
+    <LinkWrap>
+      <CtaAnchor color={color} target='_blank' href={linkArgs[2]}>{linkArgs[1]}</CtaAnchor>
+    </LinkWrap>
+  )
 }
