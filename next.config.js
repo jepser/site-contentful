@@ -32,7 +32,8 @@ module.exports = {
     config.plugins.push(
       new webpack.EnvironmentPlugin(localEnv),
       new webpack.DefinePlugin({
-        'process.env.API_URL': JSON.stringify(process.env.API_URL)
+        'process.env.CONTENTFUL_SPACE_ID': JSON.stringify(process.env.CONTENTFUL_SPACE_ID),
+        'process.env.CONTENTFUL_TOKEN': JSON.stringify(process.env.CONTENTFUL_TOKEN)
       })
     )
 
