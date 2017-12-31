@@ -9,7 +9,7 @@
     "start": "next start",
     "export": "npm run build && npm run export",
     "deploy-now": "now -e NODE_ENV=production --token $NOW_TOKEN --npm",
-    "alias": "now alias --token=$NOW_TOKEN",
+    "alias": "now alias --token=$NOW_TOKEN"
   },
   "now": {
     "name": "jepser",
