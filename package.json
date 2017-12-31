@@ -8,13 +8,12 @@
     "build": "next build",
     "start": "next start",
     "export": "npm run build && next export",
-    "deploy-now": "now out/ -e NODE_ENV=production --token $NOW_TOKEN",
+    "deploy-now": "now out -e NODE_ENV=production --token $NOW_TOKEN",
     "alias": "now alias --token=$NOW_TOKEN"
   },
   "now": {
     "name": "jepser",
-    "alias": "jepser.com",
-    "target": "out"
+    "alias": "jepser.com"
   },
   "author": "Jepser",
   "license": "ISC",
