@@ -7,7 +7,7 @@
     "dev": "node server.js",
     "build": "next build",
     "start": "next start",
-    "export": "npm run build && npm run export",
+    "export": "npm run build && next export",
     "deploy-now": "now -e NODE_ENV=production --token $NOW_TOKEN --npm",
     "alias": "now alias --token=$NOW_TOKEN"
   },
