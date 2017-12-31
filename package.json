@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "export": "npm run build && next export",
-    "deploy-now": "now -e NODE_ENV=production --token $NOW_TOKEN --npm",
+    "deploy-now": "cd ./out && now -e NODE_ENV=production --token $NOW_TOKEN --npm",
     "alias": "now alias --token=$NOW_TOKEN"
   },
   "now": {
