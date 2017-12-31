@@ -12,7 +12,7 @@
     "alias": "now alias --token=$NOW_TOKEN"
   },
   "now": {
-    "name": "jepser",
+    "name": "out",
     "alias": "jepser.com"
   },
   "author": "Jepser",
