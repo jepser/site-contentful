@@ -7,9 +7,13 @@
     "dev": "node server.js",
     "build": "next build",
     "start": "next start",
-    "export": "next export",
-    "deploy": "npm run build && npm run export",
-    "deploy-now": "npm run deploy && cd ./out && now --public"
+    "export": "npm run build && npm run export",
+    "deploy-now": "now -e NODE_ENV=production --token $NOW_TOKEN --npm",
+    "alias": "now alias --token=$NOW_TOKEN",
+  },
+  "now": {
+    "name": "jepser",
+    "alias": "jepser.com"
   },
   "author": "Jepser",
   "license": "ISC",
