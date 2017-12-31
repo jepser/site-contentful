@@ -28,7 +28,7 @@ const Iframe = styled.iframe`
 const Index = (props) => {
 
   return(
-    <Page title='Static public site'>
+    <Page title='Contacto | Jepser Bernardino - Frontend developer & WordPress expert'>
       <Wrap>
         <Iframe id="typeform-full" width="100%" height="100%" frameborder="0" src="https://jepser.typeform.com/to/yQ1K0K" />
         <script type="text/javascript" src="https://embed.typeform.com/embed.js"></script>

@@ -16,7 +16,7 @@ import {
 const Index = (props) => {
 
   return(
-    <Page title='Static public site'>
+    <Page title='Jepser Bernardino - Frontend developer & WordPress expert'>
       <Wrap>
         <Container>
           <Content>

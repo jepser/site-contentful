@@ -16,7 +16,7 @@ const Index = (props) => {
   } = props.data
   
   return(
-    <Page title='Labs - Jepser Bernardino' theme="dark">
+    <Page title='Labs | Jepser Bernardino - Frontend developer & WordPress expert' theme="dark">
       {
         items.map(item => (
           <Preview key={item.sys.id} {...item} />  

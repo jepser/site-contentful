@@ -15,11 +15,9 @@ const Index = (props) => {
   const {
     items
   } = props.data
-
-  console.log(props)
   
   return(
-    <Page title='Artículos - Jepser Bernardino'>
+    <Page title='Artículos | Jepser Bernardino - Frontend developer & WordPress expert'>
       <Content>
       {
         items.map(item => (
