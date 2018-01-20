@@ -6,33 +6,26 @@ import contentClient from '../transport/contentful'
 import Header from '../components/Header'
 import Page from '../layouts/base'
 
-import {
-  Title,
-  Spacer,
-  Wrap,
-  OppositeWrap,
-  Content,
-  Container
-} from '../components/Home/styled-components'
+import Content from '../components/Content'
 
-const Iframe = styled.iframe`
-  position: absolute;
-  left:0;
-  right:0;
-  bottom:0;
-  top:0;
-  border:0;
-  z-index: 1;
+const Wrap = styled.div`
+  font-size: 36px;
+`
+
+const Container = styled.div`
+
 `
 
 const Index = (props) => {
 
   return(
     <Page title='Contacto | Jepser Bernardino - Frontend developer & WordPress expert'>
-      <Wrap>
-        <Iframe id="typeform-full" width="100%" height="100%" frameborder="0" src="https://jepser.typeform.com/to/yQ1K0K" />
-        <script type="text/javascript" src="https://embed.typeform.com/embed.js"></script>
-      </Wrap>
+      <Content>
+        <Wrap>
+          <p>Envía un correo a: </p>
+          <p>jepsersk8 [at] <br/>gmail [dot] <br/>com</p>
+        </Wrap>
+      </Content>
     </Page>
   )
 }

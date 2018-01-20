@@ -54,8 +54,6 @@ export const Item = styled.div`
 `
 
 export const TitleWrap = styled.div`
-  background-color: ${props => props.color ? props.color : '#333'};
-  background-image: ${props => props.background ? `url(${props.background})` : 'none'};
   background-size: cover;
   background-position: center bottom;
   background-attachment: fixed;
@@ -65,13 +63,24 @@ export const MainTitle = styled.h1`
   margin: 0;
   font-size: 36px;
   font-weight: normal;
-  color: white;
 `
 
 export const TitleContent = styled(DefaultContent)`
-  display: flex;
-  align-items: center;
-  min-height: 40vh;
+  min-height: 0;
+  padding-top: 80px;
+  padding-bottom: 0;
+
+  @media (max-width: 640px) {
+    padding-top: 40px;
+  }
+
+  &::after {
+    content: '';
+    width: 80px;
+    margin-top: 40px;
+    display: block;
+    border-bottom: 4px solid;
+  }
 `
 
 export const Meta = styled.div`

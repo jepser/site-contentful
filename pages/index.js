@@ -23,6 +23,7 @@ const Index = (props) => {
             <Title>Soy Jepser Bernardino. </Title>
             <Title>Frontend developer & WordPress expert de Guatemala.</Title>
             <Title>He colaborado con empresas como: <br/>Saatchi & Saatchi, BBDO, Taco Bell & Starmedia.</Title>
+            <Title>Co-fundador de <a href="royalestudios.com">royalestudios</a>.</Title>
             <Title>Actualmente vivo en Barcelona y <br /> trabajo en Typeform.</Title>
             <Spacer />
           </Content>

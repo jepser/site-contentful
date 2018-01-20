@@ -5,6 +5,7 @@ import Header from '../components/Header'
 import Tracking from '../components/Head'
 
 const Wrap = styled.div`
+  min-height: 100vh;
 `
 
 export default ({ children, title, theme }) => (
