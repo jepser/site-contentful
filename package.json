@@ -36,6 +36,6 @@
     "styled-components": "^2.2.3"
   },
   "devDependencies": {
-    "now": "^9.0.1"
+    "now": "9.2.6"
   }
 }

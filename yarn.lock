@@ -3453,9 +3453,9 @@ normalize-url@2.0.1:
     query-string "^5.0.1"
     sort-keys "^2.0.0"
 
-now@^9.0.1:
-  version "9.0.1"
-  resolved "https://registry.yarnpkg.com/now/-/now-9.0.1.tgz#6489ba61e6fe6bbe18bc301b35212b827465dd7b"
+now@9.2.6:
+  version "9.2.6"
+  resolved "https://registry.yarnpkg.com/now/-/now-9.2.6.tgz#40b81973de8e6b0257b369d0b1536d977747ef11"
 
 "npm-package-arg@^3.0.0 || ^4.0.0 || ^5.0.0":
   version "5.1.2"
