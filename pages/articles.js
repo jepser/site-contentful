@@ -31,7 +31,7 @@ const Index = (props) => {
 
 Index.getInitialProps = async () => {
 
-  const data = await contentClient.getEntries({ content_type: 'articles'})
+  const data = await contentClient.getEntries({ content_type: 'articles', order: '-sys.createdAt' })
   return { data }
 }
 
