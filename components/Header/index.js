@@ -9,8 +9,6 @@ import {
   MenuWrap
 } from './styled-components'
 
-// console.log(popup)
-
 const Header = ({theme}) => {
 
   let color = '#333'
