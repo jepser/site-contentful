@@ -1,6 +1,10 @@
 import Link from 'next/link'
 import ActiveLink from '../ActiveLink'
 
+const makePopup = typeof document !== 'undefined'
+  ? require('@typeform/embed').makePopup
+  : null
+
 import Logo from '../Logo'
 import {
   Menu,
@@ -18,6 +22,21 @@ const Header = ({theme}) => {
     background = 'transparent'
   }
 
+  let popup = null
+  
+  const showTypeform = (e) => {
+    if (makePopup) {
+      e.preventDefault()
+
+      if(!popup) {
+        popup = makePopup('https://jepser.typeform.com/to/yQ1K0K', {
+          mode: 'popup'
+        })
+      }
+      popup.open()
+    }
+  }
+
   return(
     <Wrap>
       <MenuWrap>
@@ -26,15 +45,13 @@ const Header = ({theme}) => {
             <Logo color={color} background={background} />
           </div>
         </Link>
-          <ActiveLink href="/articles" Component={Item} color={color} background={background}>
-            Artículos
-          </ActiveLink>
-          <ActiveLink href="/labs" Component={Item} color={color} background={background}>
-            Labs
-          </ActiveLink>
-          <ActiveLink href="/contact" Component={Item} color={color} background={background}>
-            Contacto
-          </ActiveLink>
+        <ActiveLink href="/articles" Component={Item} color={color} background={background}>
+          Artículos
+        </ActiveLink>
+        <ActiveLink href="/labs" Component={Item} color={color} background={background}>
+          Labs
+        </ActiveLink>
+        <Item href="https://jepser.typeform.com/to/yQ1K0K" onClick={showTypeform}>Contact</Item>
       </MenuWrap>
     </Wrap>
   )
