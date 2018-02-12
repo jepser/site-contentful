@@ -51,7 +51,7 @@ const Header = ({theme}) => {
         <ActiveLink href="/labs" Component={Item} color={color} background={background}>
           Labs
         </ActiveLink>
-        <Item href="https://jepser.typeform.com/to/yQ1K0K" onClick={showTypeform}>Contact</Item>
+        <Item href="https://jepser.typeform.com/to/yQ1K0K" color={color} background={background} active={false} onClick={showTypeform}>Contact</Item>
       </MenuWrap>
     </Wrap>
   )
