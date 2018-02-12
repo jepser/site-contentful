@@ -5,7 +5,9 @@ cache: npm
 script:
 - npm run export
 - npm run deploy-now
-after_script: npm run alias
+after_success:
+  - npm run alias
+  - npm run semantic-release
 env:
   global:
   - secure: OpvGfri7C+48qizM9FKD/QrTecpwifHCFjGigOLzMwuJS30rEcy9Daq4Cy5KKYdy1ZAzy90Y1uox9zTB/YtSaIVmNUY+MUutA/rSTcfIf5qwF4V5RcBv3iO28b8eteSwhblk6oQHK77o7PpgK7CAnSTJQ6yIyfMgMIyf5qCvJ+D50PRKs4qjEDnQth6z6jf9VxFHoqLCwsfJ7csijViWNxNRDZ/tCOhG5r8JfAgtz+4qvwaxlxE4JlvtPUJjRQ0Gcl3155q2Z9losTevM3PVVAXPM4hYM2dWpbkZeIYf21xMyLlhm2emwOd1DHAaH3rDmuYrt4XmVQBUjmAC5ZtWb0x7/PGJ65Cug1s7/Bw3GBu4exfCCWHJSGH1NMwYhZDGePQnu1WJnrvCQ1WLxhiDHTIZCyczadhPrS2aa4epvnSBKVWPDTJaFMOyHKCtSFnW9AQ1j2X5GPltR4VjSOEU0EpLbUW3IJey7DRfApw6iHums7UdW7TBtpsi2GRYAm7gNPHEWsOWMQCmaKxmSK85qk1CDtmpq/9T6ro+nH2ad1BqD9T+TQ4kCRmhWLpaKACpuSYwP16JR3bBHvSrnXeoXnisx0taxQoviKdGLAe3M6it+3sGcqOq5itK//DJV5/cg8+d0hY/Vw4sO2CpzWCv7/mxkLvYiYleW87+62p0O74=
