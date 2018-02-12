@@ -3,6 +3,10 @@ import {
   normalizeId
 } from '../../helpers'
 
+const makePopup = typeof document !== 'undefined'
+  ? require('@typeform/embed').makePopup
+  : null
+
 export const Link = styled.a`
   display: inline-block;
   position: relative;
@@ -91,10 +95,18 @@ export const Heading = ({level, children}) => {
 export const CtaLink = ({value, color}) => {
   const matchLink = /\[([^]+)\]\(([^]+)\)/g
   const linkArgs = matchLink.exec(value)
+  const popup = makePopup ? makePopup(linkArgs[2], {
+    mode: 'popup'
+  }) : null
 
   return (
     <LinkWrap>
-      <CtaAnchor color={color} target='_blank' href={linkArgs[2]}>{linkArgs[1]}</CtaAnchor>
+      <CtaAnchor color={color} target='_blank' href={linkArgs[2]} onClick={ev => {
+        ev.preventDefault()
+        if (popup) {
+          popup.open()
+        }
+      }}>{linkArgs[1]}</CtaAnchor>
     </LinkWrap>
   )
 }
