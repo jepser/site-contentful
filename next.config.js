@@ -1,7 +1,7 @@
 const { parsed: localEnv } = require('dotenv').config()
 const webpack = require('webpack')
 const contentClient = require('./transport/contentful')
-const staticPages = require('./routes')
+const staticPages = require('./routes')()
 
 module.exports = {
   async exportPathMap () {
