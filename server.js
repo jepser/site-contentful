@@ -18,7 +18,11 @@ app.prepare().then(() => {
     const type = req.params.type
     if(['labs', 'articles'].indexOf(type) !== -1) {
       const params = { slug: req.params.slug, type: type }
-      return app.render(req, res, '/article', params)
+      let template = '/article'
+      if (params.slug === 'script-para-migracion') {
+        template = '/labs/migration-script'
+      }
+      return app.render(req, res, template, params)
     } else {
       next()
     }

@@ -1,6 +1,7 @@
 const { parsed: localEnv } = require('dotenv').config()
 const webpack = require('webpack')
 const contentClient = require('./transport/contentful')
+const staticPages = require('./routes')
 
 module.exports = {
   async exportPathMap () {
@@ -20,12 +21,7 @@ module.exports = {
       )
 
 
-    return Object.assign({}, pages, {
-      '/': { page: '/' },
-      '/contact': { page: '/contact'},
-      '/labs': { page: '/labs' },
-      '/articles': { page: '/articles' }
-    })
+    return Object.assign({}, pages, staticPages)
   },
   webpack: (config) => {
 

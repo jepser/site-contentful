@@ -28,10 +28,11 @@ const LinkWrap = styled.div`
   padding: 10px 0;
 `
 
-const CtaAnchor = styled.a`
-  background-color: ${props => props.color};
+export const CtaAnchor = styled.a`
+  background-color: ${props => props.color || '#333'};
   color: white;
   padding: 10px 45px;
+  border: 0;
   font-size: 18px;
   text-transform: uppercase;
 `
