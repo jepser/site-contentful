@@ -1,12 +1,12 @@
 import fetch from 'isomorphic-fetch'
 import Link from 'next/link'
 
-import contentClient from '../transport/contentful'
-import Page from '../layouts/base'
+import contentClient from '../../transport/contentful'
+import Page from '../../layouts/base'
 
 import Labs, {
   Preview
-} from '../components/Labs'
+} from '../../components/Labs'
 
 
 const Index = (props) => {
