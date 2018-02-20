@@ -42,6 +42,7 @@ injectGlobal`
 
   a {
     text-decoration: none;
+    color: inherit;
   }
 
   a:hover {

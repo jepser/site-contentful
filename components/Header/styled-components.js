@@ -3,16 +3,16 @@ import styled, {
 } from 'styled-components'
 
 export const Wrap = styled.div`
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100%;
+  position: static;
+  height: auto;
+  overflow: hidden;
   z-index: 2;
 
-  @media (max-width: 640px) {
-    position: relative;
-    height: auto;
-    overflow: hidden;
+  @media (min-width: 768px) {
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
   }
 `
 
