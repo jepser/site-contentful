@@ -92,9 +92,10 @@ export const Meta = styled.div`
 `
 
 export const ContinueReading = styled(Link)`
-  text-transform: uppercase;
-  color: inherit;
   margin-right: 20px;
+  text-transform: uppercase;
+  color: inherit;  
+  text-decoration: none;
   &::after {
     bottom: -5px;
     width: 80%;

@@ -6,8 +6,10 @@ const Content = styled.div`
   max-width: 800px;
   line-height: 1.625;
 
-  a {
-    text-decoration: underline;
+  li, ul, p {
+    a { 
+      text-decoration: underline;
+    }
   }
 
   img {
