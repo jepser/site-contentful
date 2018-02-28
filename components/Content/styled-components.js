@@ -33,25 +33,38 @@ export const CtaAnchor = styled.a`
   color: white;
   padding: 10px 45px;
   border: 0;
+  text-decoration: none;
   font-size: 18px;
   text-transform: uppercase;
+  transition: opacity .3s ease;
+
+  &:hover {
+    opacity: .9;
+  }
 `
 
 export const Paragraph = styled.p`
   a {
     color: inherit;
-    border-bottom: 2px solid;
   }
 `
 
 const ImageWrap = styled.span`
   display: block;
+  margin: 0 auto 20px;
   text-align: ${props => props.align ? props.align : 'center'};
 `
 
-const ImageContent = styled.img`
+const ImageElement = styled.img`
   max-width: 100%;
   height: auto;
+`
+
+const ImageCaption = styled.span`
+  font-size: 12px;
+  color: #AAA;
+  display: block;
+  text-align: center;
 `
 
 export const Code = styled.code`
@@ -74,10 +87,11 @@ export const ListItem = styled.li`
   margin-bottom: 5px;
 `
 
-export const Image = (props) => {
+export const Image = ({align, src, alt}) => {
   return (
-    <ImageWrap align={props.align}>
-      <ImageContent {...props} />
+    <ImageWrap align={align}>
+      <ImageElement src={src} alt={alt} />
+      {alt !== '' && <ImageCaption>{alt}</ImageCaption>}
     </ImageWrap>
   )
 }
