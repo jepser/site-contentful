@@ -18,6 +18,7 @@ import {
 import {
   ArticleTitle
 } from '../components/Labs'
+import Notice from '../components/Notice'
 
 const Index = (props) => {
 
@@ -64,6 +65,7 @@ const Index = (props) => {
       <ArticleTitle color={pageColor}  background={coverImage}>{fields.title}</ArticleTitle>
       <Content>
         <ReactMarkdown source={fields.content} renderers={renderers} />
+        <Notice />
       </Content>
     </Page>
   )
