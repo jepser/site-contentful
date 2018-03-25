@@ -77,9 +77,10 @@ export const Code = styled.code`
 
 export const Pre = styled.pre`
   padding: 10px;
-  background-color: #F1F1F1;
+  color: white;
+  background: #333;
   border-radius: 3px;
-  border: 1px solid #CCC;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, .5);
   overflow: auto;
 `
 
