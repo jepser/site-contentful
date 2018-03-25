@@ -16,7 +16,7 @@ export default ({ children, title, theme }) => (
     </Head>
     <Header theme={theme} />
     <Wrap>
-    { children }
+      { children }
     </Wrap>
   </div>
 )

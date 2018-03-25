@@ -9,6 +9,7 @@ import {
 } from '../components/Articles'
 
 import Content from '../components/Content'
+import Notice from '../components/Notice'
 
 const Index = (props) => {
 
@@ -24,6 +25,7 @@ const Index = (props) => {
           <Preview key={item.sys.id} {...item} />
         ))
       }
+      <Notice />
       </Content>
     </Page>
   )
