@@ -61,6 +61,7 @@ export const TitleWrap = styled.div`
 
 export const MainTitle = styled.h1`
   margin: 0;
+  line-height: 1.5;
   font-size: 36px;
   font-weight: normal;
 `
