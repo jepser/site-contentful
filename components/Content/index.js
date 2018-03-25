@@ -9,6 +9,9 @@ const Content = styled.div`
   li, ul, p {
     a { 
       text-decoration: underline;
+      &:after {
+        display: none;
+      }
     }
   }
 
