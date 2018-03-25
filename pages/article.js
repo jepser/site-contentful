@@ -28,9 +28,6 @@ const Index = (props) => {
   const pageColor = fields.color || '#333'
 
   const renderers = {
-    'link': (props) => {
-      return <Link {...props} />
-    },
     'paragraph': (props) => {
       return <Paragraph {...props} />
     },
