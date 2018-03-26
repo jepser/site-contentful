@@ -35,7 +35,7 @@ export const Preview = (props) => {
         <Item>
           <PublishDate>{publishedDate}</PublishDate>
           <Title>
-            <Link href={`/article?slug=${slug}&type=articles`} as={`/articles/${slug}`}>
+            <Link href={`/article?slug=${slug}&type=articles`} as={`/articles/${slug}/`}>
               <a>{title}</a>
             </Link>
           </Title>
