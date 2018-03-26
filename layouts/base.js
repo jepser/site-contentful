@@ -2,7 +2,6 @@ import {
   Component
 } from 'react'
 import Head from 'next/head'
-import NProgress from 'nprogress'
 import Router from 'next/router'
 import styled from 'styled-components'
 
