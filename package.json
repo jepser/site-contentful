@@ -14,7 +14,10 @@
   },
   "now": {
     "name": "out",
-    "alias": "jepser.com"
+    "alias": [
+      "jepser.com",
+      "www.jepser.com"
+    ]
   },
   "release": {
     "verifyConditions": [
