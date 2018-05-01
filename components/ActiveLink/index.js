@@ -9,7 +9,7 @@ const ActiveLink = ({ Component, router, href, ...props }) => {
   }
 
   const isActive = () => {
-    return href.indexOf(router.query.type) !== -1 || router.pathname === href
+    return router.pathname === href
   }
 
   return (

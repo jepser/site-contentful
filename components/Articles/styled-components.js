@@ -31,7 +31,7 @@ export const Wrap = styled.div`
 `
 
 export const Excerpt = styled.p`
-  font-family: ibm-plex-serif;
+  font-family: 'IBM Plex Sans';
   margin: 0 0 20px;
 `
 
@@ -43,7 +43,6 @@ export const PublishDate = styled.span`
 `
 
 export const Labs = styled.div`
-  // color: white;
 `
 
 export const Item = styled.div`

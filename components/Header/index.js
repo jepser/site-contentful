@@ -45,10 +45,10 @@ const Header = ({theme}) => {
             <Logo color={color} background={background} />
           </div>
         </Link>
-        <ActiveLink href="/articles/" Component={Item} color={color} background={background}>
+        <ActiveLink href="/articles" Component={Item} color={color} background={background}>
           Artículos
         </ActiveLink>
-        <ActiveLink href="/labs/" Component={Item} color={color} background={background}>
+        <ActiveLink href="/labs" Component={Item} color={color} background={background}>
           Labs
         </ActiveLink>
         <Item href="https://jepser.typeform.com/to/yQ1K0K" color={color} background={background} active={false} onClick={showTypeform}>Contacto</Item>
