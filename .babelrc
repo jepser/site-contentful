@@ -4,7 +4,6 @@
   ],
   "plugins": [
     ["styled-components", { "ssr": true, "displayName": true, "preprocess": false } ],
-    "inline-react-svg",
-    "transform-es2015-modules-commonjs"
+    "inline-react-svg"
   ]
 }
