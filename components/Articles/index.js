@@ -10,37 +10,31 @@ import {
   Item
 } from './styled-components'
 
-export const Preview = (props) => {
-  const {
-    title,
-    excerpt,
-    slug,
-    color,
-    thumbnail
-  } = props.fields
+export const Preview = props => {
+  const { title, excerpt, slug, color, thumbnail } = props.fields
 
   let coverImage = null
 
-  if(thumbnail) {
+  if (thumbnail) {
     coverImage = thumbnail.fields.file.url
   }
 
-  const {
-    createdAt,
-    id
-  } = props.sys
+  const { createdAt, id } = props.sys
   const publishedDate = moment(createdAt).locale('es').format('MMMM Do, YYYY')
-  return(
-    <Wrap>
-        <Item>
-          <PublishDate>{publishedDate}</PublishDate>
-          <Title>
-            <Link href={`/article?slug=${slug}&type=articles`} as={`/articles/${slug}`}>
-              <a>{title}</a>
-            </Link>
-          </Title>
-          <Excerpt>{excerpt}</Excerpt>
-        </Item>
+  return (
+    <Wrap color={color}>
+      <Item>
+        <PublishDate>{publishedDate}</PublishDate>
+        <Title>
+          <Link
+            href={`/article?slug=${slug}&type=articles`}
+            as={`/articles/${slug}`}
+          >
+            <a>{title}</a>
+          </Link>
+        </Title>
+        <Excerpt>{excerpt}</Excerpt>
+      </Item>
     </Wrap>
   )
 }

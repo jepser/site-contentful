@@ -17,7 +17,7 @@ injectGlobal`
     min-height: 100%;
   }
   
-  h1, h2, h3, h4, h5 {
+  h1, h2, h3, h4, h5, button, input {
     font-family: 'IBM Plex Sans';
   }
 
@@ -41,25 +41,30 @@ injectGlobal`
 `
 
 export default class MyDocument extends Document {
-  static async getInitialProps({ renderPage }) {
+  static async getInitialProps ({ renderPage }) {
     const sheet = new ServerStyleSheet()
     const page = renderPage(App => props =>
-      sheet.collectStyles(<App {...props} />)
-    )
+      sheet.collectStyles(<App {...props} />))
     const styleTags = sheet.getStyleElement()
     return { ...page, styleTags }
   }
 
-  render() {
+  render () {
     return (
       <html>
         <Head>
           <title>Jepser Bernardino</title>
-          <link rel="icon" href="/static/favicon.ico" />
+          <link rel='icon' href='/static/favicon.ico' />
           <meta charSet='utf-8' />
-          <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" rel="stylesheet" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-          
+          <link
+            href='https://fonts.googleapis.com/css?family=IBM+Plex+Sans'
+            rel='stylesheet'
+          />
+          <meta
+            name='viewport'
+            content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
+          />
+
           {this.props.styleTags}
         </Head>
         <body>

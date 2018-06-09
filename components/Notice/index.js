@@ -16,7 +16,7 @@ const Notice = () => {
       ·
       <br />
       <br />
-      <Paragraph strike>Colombia del 17 de marzo al 9 de abril.</Paragraph>
+      <Paragraph strike>🇨🇴 Colombia del 17 de marzo al 9 de abril.</Paragraph>
       <Paragraph strike>
         🇪🇸 Madrid el 20 y 21 de abril, speaker en
         {' '}
@@ -33,20 +33,20 @@ const Notice = () => {
         </a>
         .
       </Paragraph>
+      <Paragraph>
+        🇷🇸 Serbia en Junio para el
+        {' '}
+        <a href='https://2018.europe.wordcamp.org/' target='_bank'>
+          WordCamp Europe
+        </a>
+        .
+      </Paragraph>
       <Paragraph>🇬🇹 Guatemala del 12 de Julio al 1 de Agusto.</Paragraph>
       <Paragraph>
         🇨🇷 Costa Rica 21 y 22 de Julio, speaker en
         {' '}
         <a href='https://2018.sanjose.wordcamp.org/' target='_bank'>
           WordCamp Costa Rica
-        </a>
-        .
-      </Paragraph>
-      <Paragraph>
-        🇷🇸 Serbia en Junio para el
-        {' '}
-        <a href='https://2018.europe.wordcamp.org/' target='_bank'>
-          WordCamp Europe
         </a>
         .
       </Paragraph>
