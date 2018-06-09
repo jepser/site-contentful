@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
-import {default as DefaultContent } from '../Content'
+import DefaultContent from '../Content'
 import {
   Link
-} from '../Content/styled-components'
+} from '../MarkDown/styled-components'
 
 export const Title = styled.h2`
   font-size: 48px;
@@ -51,12 +51,6 @@ export const Content = styled(DefaultContent)`
 `
 
 export const Item = styled.div`
-`
-
-export const TitleWrap = styled.div`
-  background-size: cover;
-  background-position: center bottom;
-  background-attachment: fixed;
 `
 
 export const MainTitle = styled.h1`

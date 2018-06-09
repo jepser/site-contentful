@@ -1,7 +1,5 @@
 import styled from 'styled-components'
-import {
-  normalizeId
-} from '../../helpers'
+import { normalizeId } from '../../helpers'
 
 const makePopup = typeof document !== 'undefined'
   ? require('@typeform/embed').makePopup
@@ -19,7 +17,7 @@ export const Link = styled.a`
     bottom: -2px;
     width: 80%;
     height: 0;
-    border-bottom: ${props => props.width ? props.width: '2px'} solid;
+    border-bottom: ${props => (props.width ? props.width : '2px')} solid;
   }
 `
 
@@ -29,7 +27,7 @@ const LinkWrap = styled.div`
 `
 
 export const CtaAnchor = styled.a`
-  background-color: ${props => props.color || '#333'};
+  background-color: ${props => props.theme.color};
   color: white;
   padding: 10px 45px;
   border: 0;
@@ -52,7 +50,7 @@ export const Paragraph = styled.p`
 const ImageWrap = styled.span`
   display: block;
   margin: 0 auto 20px;
-  text-align: ${props => props.align ? props.align : 'center'};
+  text-align: ${props => (props.align ? props.align : 'center')};
 `
 
 const ImageElement = styled.img`
@@ -89,7 +87,7 @@ export const ListItem = styled.li`
   margin-bottom: 5px;
 `
 
-export const Image = ({align, src, alt}) => {
+export const Image = ({ align, src, alt }) => {
   return (
     <ImageWrap align={align}>
       <ImageElement src={src} alt={alt} />
@@ -103,27 +101,35 @@ const BasicHeading = styled.h1.attrs({
 })`
 `
 
-export const Heading = ({level, children}) => {
+export const Heading = ({ level, children }) => {
   const Title = BasicHeading.withComponent(`h${level}`)
 
   return <Title>{children}</Title>
 }
 
-export const CtaLink = ({value, color}) => {
+export const CtaLink = ({ value }) => {
   const matchLink = /\[([^]+)\]\(([^]+)\)/g
   const linkArgs = matchLink.exec(value)
-  const popup = makePopup ? makePopup(linkArgs[2], {
-    mode: 'popup'
-  }) : null
+  const popup = makePopup
+    ? makePopup(linkArgs[2], {
+      mode: 'popup'
+    })
+    : null
 
   return (
     <LinkWrap>
-      <CtaAnchor color={color} target='_blank' href={linkArgs[2]} onClick={ev => {
-        ev.preventDefault()
-        if (popup) {
-          popup.open()
-        }
-      }}>{linkArgs[1]}</CtaAnchor>
+      <CtaAnchor
+        target='_blank'
+        href={linkArgs[2]}
+        onClick={ev => {
+          ev.preventDefault()
+          if (popup) {
+            popup.open()
+          }
+        }}
+      >
+        {linkArgs[1]}
+      </CtaAnchor>
     </LinkWrap>
   )
 }

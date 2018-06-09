@@ -29,7 +29,8 @@ module.exports = {
       new webpack.EnvironmentPlugin(localEnv),
       new webpack.DefinePlugin({
         'process.env.CONTENTFUL_SPACE_ID': JSON.stringify(process.env.CONTENTFUL_SPACE_ID),
-        'process.env.CONTENTFUL_TOKEN': JSON.stringify(process.env.CONTENTFUL_TOKEN)
+        'process.env.CONTENTFUL_TOKEN': JSON.stringify(process.env.CONTENTFUL_TOKEN),
+        'process.env.CONTENTFUL_API_BASE_URL': JSON.stringify(process.env.CONTENTFUL_API_BASE_URL),
       })
     )
 
