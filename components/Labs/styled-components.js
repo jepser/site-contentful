@@ -53,12 +53,6 @@ export const Content = styled(DefaultContent)`
 export const Item = styled.div`
 `
 
-export const TitleWrap = styled.div`
-  background-size: cover;
-  background-position: center bottom;
-  background-attachment: fixed;
-`
-
 export const MainTitle = styled.h1`
   margin: 0;
   line-height: 1.5;

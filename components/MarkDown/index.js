@@ -1,5 +1,5 @@
 import { createElement } from 'react'
-import marksy from 'marksy'
+import marksy from 'marksy/components'
 import {
   Link,
   Paragraph,
@@ -12,37 +12,37 @@ import {
   CtaLink
 } from './styled-components'
 
-const MarkDown = ({ content, color }) => {
+const MarkDown = ({ children, color }) => {
   const renderers = {
-    'p': (props) => {
+    p: props => {
       return <Paragraph {...props} />
     },
-    'h1': (props) => {
+    h1: props => {
       return <Heading level={1} {...props} />
     },
-    'h2': (props) => {
+    h2: props => {
       return <Heading level={2} {...props} />
     },
-    'h3': (props) => {
+    h3: props => {
       return <Heading level={3} {...props} />
     },
-    'h4': (props) => {
+    h4: props => {
       return <Heading level={4} {...props} />
     },
-    'img': (props) => {
+    img: props => {
       return <Image {...props} align={props.align} />
     },
-    'li': (props) => {
+    li: props => {
       return <ListItem {...props} />
     },
-    'code': ({ language, code }) => {
+    code: ({ language, code }) => {
       if (language !== 'cta') {
         return <Pre>{code}</Pre>
       }
 
-      return <CtaLink value={code} color={color} />
+      return <CtaLink value={code} />
     },
-    'codespan': (props) => {
+    codespan: props => {
       return <Code {...props} />
     }
   }
@@ -50,8 +50,8 @@ const MarkDown = ({ content, color }) => {
     createElement,
     elements: renderers
   })
-  const compiled = compile(content)
+  const compiled = compile(children)
 
-  return(compiled.tree)
+  return compiled.tree
 }
 export default MarkDown

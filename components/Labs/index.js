@@ -12,8 +12,7 @@ import {
   ContinueReading,
   Meta,
   MainTitle,
-  TitleContent,
-  TitleWrap
+  TitleContent
 } from './styled-components'
 
 export const Preview = (props) => {
@@ -22,13 +21,14 @@ export const Preview = (props) => {
     excerpt,
     slug,
     color,
-    projectUrl
+    projectUrl,
   } = props.fields
 
   const {
     createdAt,
     id
   } = props.sys
+  
   const publishedDate = moment(createdAt).locale('es').format('MMMM Do, YYYY')
   return(
     <Wrap color={color}>
@@ -53,12 +53,10 @@ export const Preview = (props) => {
   )
 }
 
-export const ArticleTitle = (props) => (
-  <TitleWrap color={props.color} background={props.background}>
+export const ArticleTitle = ({children}) => (
     <TitleContent>
-      <MainTitle>{props.children}</MainTitle>
+      <MainTitle>{children}</MainTitle>
     </TitleContent>
-  </TitleWrap>
 )
 
 export default Labs

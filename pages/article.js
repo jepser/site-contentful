@@ -1,5 +1,5 @@
 import fetch from 'isomorphic-fetch'
-import ReactMarkdown from 'react-markdown'
+import { ThemeProvider } from 'styled-components'
 
 import contentClient from '../transport/contentful'
 import Page from '../layouts/base'
@@ -8,39 +8,32 @@ import MarkDown from '../components/MarkDown'
 import { ArticleTitle } from '../components/Labs'
 import Notice from '../components/Notice'
 
-const Index = (props) => {
+const Index = props => {
+  const { fields } = props.data
 
-  const {
-    fields
-  } = props.data
-
-  const pageColor = fields.color || '#333'
-
-  let coverImage = null
-
-  if(fields.thumbnail) {
-    coverImage = fields.thumbnail.fields.file.url
+  const theme = {
+    color: fields.color || '#333'
   }
 
-  return(
-    <Page title={`${fields.title} - Jepser Bernardino`}>
-      <ArticleTitle color={pageColor}  background={coverImage}>{fields.title}</ArticleTitle>
-      <Content>
-        <MarkDown content={fields.content} color={pageColor} />
-        {/* <ReactMarkdown source={fields.content} renderers={renderers} /> */}
-        <Notice />
-      </Content>
-    </Page>
+  return (
+    <ThemeProvider theme={theme}>
+      <Page title={`${fields.title} - Jepser Bernardino`}>
+        <ArticleTitle>{fields.title}</ArticleTitle>
+        <Content>
+          <MarkDown>{fields.content}</MarkDown>
+          <Notice />
+        </Content>
+      </Page>
+    </ThemeProvider>
   )
 }
 
-Index.getInitialProps = async ({query}) => {
-
+Index.getInitialProps = async ({ query }) => {
   const data = await contentClient.getEntries({
-    'content_type': `${query.type}`,
-    'fields.slug' : `${query.slug}`
+    content_type: `${query.type}`,
+    'fields.slug': `${query.slug}`
   })
-  const items = await data.items.length ? data.items[0] : []
+  const items = (await data.items.length) ? data.items[0] : []
 
   return { data: items }
 }
