@@ -1,5 +1,7 @@
 import { createElement } from 'react'
 import marksy from 'marksy/components'
+import Cui from 'react-cui'
+
 import {
   Link,
   Paragraph,
@@ -48,7 +50,12 @@ const MarkDown = ({ children, color }) => {
   }
   const compile = marksy({
     createElement,
-    elements: renderers
+    elements: renderers,
+    components: {
+      Cui(props) {
+        return <Cui {...props} />
+      }
+    }
   })
   const compiled = compile(children)
 
