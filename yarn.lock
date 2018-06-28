@@ -4324,9 +4324,9 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-cui@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/react-cui/-/react-cui-1.0.2.tgz#4f70238ed2a17fab71d86155c46d14fb9a8fa8da"
+react-cui@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/react-cui/-/react-cui-1.0.4.tgz#0fa15c1f9938347a5152da42792a2938cc603ccd"
 
 react-dom@^16.3.2:
   version "16.3.2"
