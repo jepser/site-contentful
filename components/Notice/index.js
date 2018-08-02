@@ -43,7 +43,6 @@ const Notice = () => {
       </Paragraph>
       <Paragraph strike>🇬🇹 Guatemala del 12 al 31 de Julio.</Paragraph>
       <Paragraph>🇨🇳 China del 8 de Septiembre al 2 de Octubre.</Paragraph>
-      <Paragraph>🇵🇱 Polonia 4 y 5 de Diciembre, speaker en frontend-con.</Paragraph>
     </Wrap>
   )
 }
