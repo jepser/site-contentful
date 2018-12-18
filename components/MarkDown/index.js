@@ -3,9 +3,7 @@ import marksy from 'marksy/components'
 import Cui from 'react-cui'
 
 import {
-  Link,
   Paragraph,
-  ImageContainer,
   Image,
   Heading,
   Code,
@@ -52,7 +50,7 @@ const MarkDown = ({ children, color }) => {
     createElement,
     elements: renderers,
     components: {
-      Cui(props) {
+      Cui (props) {
         return <Cui {...props} />
       }
     }
