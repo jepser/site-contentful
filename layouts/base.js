@@ -10,12 +10,12 @@ import Tracking from '../components/Head'
 
 const Wrap = styled.div`
   min-height: 100vh;
-  opacity: ${ props => props.isLoading ? .6 : 1};
+  opacity: ${props => props.isLoading ? 0.6 : 1};
   transition: opacity .3s ease;
 `
 
 export default class extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
 
     this.state = {
@@ -27,23 +27,25 @@ export default class extends Component {
     Router.onRouteChangeError = () => this.setState({ loading: false })
   }
 
-  render() {
+  render () {
     const {
       title,
+      description,
       theme,
       children
     } = this.props
-    return(
-      <div>
+    return (
+      <>
         {process.env.NODE_ENV === 'production' && <Tracking />}
         <Head>
           <title>{title}</title>
+          {description && <meta name='description' content={description} />}
         </Head>
         <Header theme={theme} />
         <Wrap isLoading={this.state.loading}>
           {children}
         </Wrap>
-      </div>
+      </>
     )
   }
 }

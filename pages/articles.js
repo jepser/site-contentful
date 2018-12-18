@@ -1,6 +1,3 @@
-import fetch from 'isomorphic-fetch'
-import Link from 'next/link'
-
 import contentClient from '../transport/contentful'
 import Page from '../layouts/base'
 
@@ -12,27 +9,25 @@ import Content from '../components/Content'
 import Notice from '../components/Notice'
 
 const Index = (props) => {
-
   const {
     items
   } = props.data
-  
-  return(
-    <Page title='Artículos | Jepser Bernardino - Frontend developer & WordPress expert'>
+
+  return (
+    <Page title='Artículos' description='Artículos sobre programación, emprendimiento y trabajo remoto.'>
       <Content>
-      {
-        items.map(item => (
-          <Preview key={item.sys.id} {...item} />
-        ))
-      }
-      <Notice />
+        {
+          items.map(item => (
+            <Preview key={item.sys.id} {...item} />
+          ))
+        }
+        <Notice />
       </Content>
     </Page>
   )
 }
 
 Index.getInitialProps = async () => {
-
   const data = await contentClient.getEntries({ content_type: 'articles', order: '-sys.createdAt' })
   return { data }
 }
