@@ -20,7 +20,7 @@ const Index = props => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Page title={title} description={description}>
+      <Page title={`Jepser Bernardino | ${title}`} description={description}>
         <ArticleTitle>{title}</ArticleTitle>
         <Content>
           <MarkDown>{content}</MarkDown>

@@ -12,7 +12,7 @@ import {
 const Index = (props) => {
   return (
     <Page
-      title='Jepser Bernardino | Frontend engineer'
+      title='Jepser Bernardino | Frontend engineer from Guatemala 🇬🇹'
       description='Frontend engineer con 7 años de experiencia con tecnologías web. Escribo sobre frontend, sitios estáticos, React y performance, un poco de mi experincia con trabajo remoto y vida en Barcelona.'
     >
       <Wrap>

@@ -14,7 +14,7 @@ const Index = (props) => {
   } = props.data
 
   return (
-    <Page title='Artículos' description='Artículos sobre programación, emprendimiento y trabajo remoto.'>
+    <Page title='Jepser Bernardino | artículos' description='Artículos sobre programación, emprendimiento y trabajo remoto.'>
       <Content>
         {
           items.map(item => (

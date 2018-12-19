@@ -20,10 +20,6 @@ const InputWrap = styled.div`
   background: #333;
 `
 
-const Label = styled.label`
-  display: block;
-`
-
 const CopyText = styled.div``
 
 const CopyButton = styled.button`
@@ -60,7 +56,6 @@ class Index extends Component {
 
   handleKeyUp (ev) {
     const fieldName = ev.target.getAttribute('name')
-    const fieldValue = ev.target.value
 
     this.setState({
       [fieldName]: ev.target.value
@@ -74,7 +69,7 @@ class Index extends Component {
     copyTextarea.select()
 
     try {
-      const successful = document.execCommand('copy')
+      document.execCommand('copy')
 
       this.setState({
         copied: true
@@ -104,7 +99,7 @@ class Index extends Component {
     }
     return (
       <ThemeProvider theme={theme}>
-        <Page title={`Script de migración para WordPress - Jepser Bernardino`}>
+        <Page title={`Jepser Bernardino | Script de migración para WordPress`}>
           <ArticleTitle>
             Script de Migración para WordPress
           </ArticleTitle>

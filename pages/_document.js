@@ -53,7 +53,6 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <title>Jepser Bernardino | Frontend engineer from Guatemala 🇬🇹</title>
           <link rel='icon' href='/static/favicon.ico' />
           <meta charSet='utf-8' />
           <link
