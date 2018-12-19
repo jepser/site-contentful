@@ -7,7 +7,7 @@
     "dev": "node server.js",
     "build": "next build",
     "start": "next start",
-    "export": "npm run build && next export",
+    "export": "yarn build && next export",
     "deploy-now": "now out -e NODE_ENV=production --token $NOW_TOKEN",
     "alias": "now alias --token=$NOW_TOKEN",
     "semantic-release": "semantic-release"
@@ -41,7 +41,7 @@
     "isomorphic-fetch": "^2.2.1",
     "marksy": "^6.0.3",
     "moment": "^2.19.1",
-    "next": "7",
+    "next": "7.0.2",
     "raw-loader": "^0.5.1",
     "react": "^16.3.2",
     "react-cui": "^1.0.4",
