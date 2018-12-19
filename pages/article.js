@@ -1,6 +1,4 @@
-import fetch from 'isomorphic-fetch'
 import { ThemeProvider } from 'styled-components'
-
 import contentClient from '../transport/contentful'
 import Page from '../layouts/base'
 import Content from '../components/Content'
@@ -9,18 +7,23 @@ import { ArticleTitle } from '../components/Labs'
 import Notice from '../components/Notice'
 
 const Index = props => {
-  const { fields } = props.data
+  const {
+    color,
+    title,
+    description,
+    content
+  } = props.fields
 
   const theme = {
-    color: fields.color || '#333'
+    color: color || '#333'
   }
 
   return (
     <ThemeProvider theme={theme}>
-      <Page title={`${fields.title} - Jepser Bernardino`}>
-        <ArticleTitle>{fields.title}</ArticleTitle>
+      <Page title={title} description={description}>
+        <ArticleTitle>{title}</ArticleTitle>
         <Content>
-          <MarkDown>{fields.content}</MarkDown>
+          <MarkDown>{content}</MarkDown>
           <Notice />
         </Content>
       </Page>
@@ -33,9 +36,9 @@ Index.getInitialProps = async ({ query }) => {
     content_type: `${query.type}`,
     'fields.slug': `${query.slug}`
   })
-  const items = (await data.items.length) ? data.items[0] : []
+  const item = data.items.length ? data.items[0] : {}
 
-  return { data: items }
+  return item
 }
 
 export default Index

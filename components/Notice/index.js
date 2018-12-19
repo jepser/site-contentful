@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import Content from '../Content'
 
 const Wrap = styled.div`
   text-align: center;
@@ -20,7 +19,11 @@ const Notice = () => {
       <Paragraph strike>
         🇪🇸 Madrid el 20 y 21 de abril, speaker en
         {' '}
-        <a href='https://2018.madrid.wordcamp.org/programa/' target='_blank'>
+        <a
+          href='https://2018.madrid.wordcamp.org/programa/'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
           WordCamp Madrid
         </a>
         .
@@ -28,12 +31,26 @@ const Notice = () => {
       <Paragraph strike>
         🇵🇹 Porto 18 y 19 de mayo, speaker en
         {' '}
-        <a href='https://2018.porto.wordcamp.org/' target='_bank'>
+        <a
+          href='https://2018.porto.wordcamp.org/'
+          target='_bank'
+          rel='noopener noreferrer'
+        >
           WordCamp Porto
         </a>
         .
       </Paragraph>
-      <Paragraph>🇵🇱 Polonia 4 y 5 de Diciembre, speaker en <a href='http://frontend-con.io/' target='_blank'>Frontend Connect</a>.</Paragraph>
+      <Paragraph strike>
+        🇵🇱 Polonia 4 y 5 de Diciembre, speaker en
+        <a
+          href='http://frontend-con.io/'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          Frontend Connect
+        </a>.
+      </Paragraph>
+      <Paragraph>Until next year.</Paragraph>
     </Wrap>
   )
 }
