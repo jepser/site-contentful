@@ -1,5 +1,5 @@
 import { createElement } from 'react'
-import marksy from 'marksy/components'
+import marksy from 'marksy/jsx'
 import Cui from 'react-cui'
 
 import {

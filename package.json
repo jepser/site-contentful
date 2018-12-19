@@ -7,7 +7,7 @@
     "dev": "node server.js",
     "build": "next build",
     "start": "next start",
-    "export": "npm run build && next export",
+    "export": "yarn build && next export",
     "deploy-now": "now out -e NODE_ENV=production --token $NOW_TOKEN",
     "alias": "now alias --token=$NOW_TOKEN",
     "semantic-release": "semantic-release"

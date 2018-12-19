@@ -1,7 +1,7 @@
-import { injectGlobal, ServerStyleSheet } from 'styled-components'
+import { createGlobalStyle, ServerStyleSheet } from 'styled-components'
 import Document, { Head, Main, NextScript } from 'next/document'
 
-injectGlobal`
+const GlobalStyle = createGlobalStyle`
   
   @font-face {
   font-family: 'IBM Plex Sans', sans-serif;
@@ -53,7 +53,7 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <title>Jepser Bernardino</title>
+          <title>Jepser Bernardino | Frontend engineer from Guatemala 🇬🇹</title>
           <link rel='icon' href='/static/favicon.ico' />
           <meta charSet='utf-8' />
           <link
@@ -64,7 +64,7 @@ export default class MyDocument extends Document {
             name='viewport'
             content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
           />
-
+          <GlobalStyle />
           {this.props.styleTags}
         </Head>
         <body>
