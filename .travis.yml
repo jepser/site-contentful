@@ -4,9 +4,9 @@ node_js:
 cache: yarn
 script:
 - yarn export
-- yarn deploy-now
+- 'if [ "$TRAVIS_BRANCH" = "master" ]; then yarn deploy-now; fi'
 after_success:
-  - yarn alias
+  - 'if [ "$TRAVIS_BRANCH" = "master" ]; then yarn alias; fi'
   - yarn semantic-release
 env:
   global:

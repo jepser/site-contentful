@@ -9,7 +9,7 @@
     "start": "next start",
     "export": "yarn build && next export",
     "now-build": "next build && next export",
-    "deploy-now": "now out -e NODE_ENV=production --token $NOW_TOKEN",
+    "deploy-now": "now --token $NOW_TOKEN",
     "alias": "now alias --token=$NOW_TOKEN",
     "semantic-release": "semantic-release"
   },
