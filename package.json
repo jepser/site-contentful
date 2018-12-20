@@ -19,7 +19,13 @@
       "jepser.com",
       "www.jepser.com"
     ],
-    "version": 2
+    "version": 2,
+    "builds": [
+      {
+        "src": "package.json",
+        "use": "@now/static-build"
+      }
+    ]
   },
   "release": {
     "verifyConditions": [
