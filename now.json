@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "name": "out",
+  "alias": [
+    "jepser.com",
+    "www.jepser.com"
+  ],
+  "builds": [
+      { "src": "package.json", "use": "@now/static-build" }
+  ]
+}
