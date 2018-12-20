@@ -13,6 +13,20 @@
     "alias": "now alias --token=$NOW_TOKEN",
     "semantic-release": "semantic-release"
   },
+  "now": {
+    "name": "out",
+    "alias": [
+      "jepser.com",
+      "www.jepser.com"
+    ],
+    "version": 2,
+    "builds": [
+      {
+        "src": "package.json",
+        "use": "@now/static-build"
+      }
+    ]
+  },
   "release": {
     "verifyConditions": [
       "@semantic-release/github"
