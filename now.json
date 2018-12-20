@@ -5,10 +5,6 @@
     "jepser.com",
     "www.jepser.com"
   ],
-  "env": {
-    "CONTENTFUL_TOKEN": "@contentful_token",
-    "CONTENTFUL_SPACE_ID": "@contentful_space_id"
-  },
   "builds": [
     {
       "src": "package.json",
