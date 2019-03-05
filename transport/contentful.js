@@ -1,4 +1,4 @@
-const {createClient} = require('contentful')
+const { createClient } = require('contentful')
 
 const contentClient = createClient({
   space: `${process.env.CONTENTFUL_SPACE_ID}`,

@@ -12,17 +12,18 @@ import {
 const Index = (props) => {
   return (
     <Page
-      title='Jepser Bernardino | Frontend engineer from Guatemala 🇬🇹'
+      title='Jepser Bernardino | Software engineer from Guatemala 🇬🇹'
       description='Frontend engineer con 7 años de experiencia con tecnologías web. Escribo sobre frontend, sitios estáticos, React y performance, un poco de mi experincia con trabajo remoto y vida en Barcelona.'
     >
       <Wrap>
         <Container>
           <Content>
-            <Title>Soy Jepser Bernardino.</Title>
-            <Title>Frontend engineer de Guatemala.</Title>
-            <Title>He colaborado con empresas como: <br />Saatchi & Saatchi, BBDO, Taco Bell & Starmedia.</Title>
-            <Title>Co-fundador de <a href='https://royalestudios.com'>royalestudios</a>.</Title>
-            <Title>Actualmente vivo en Barcelona y <br /> trabajo en Typeform.</Title>
+            <Title>Hi, I am Jepser Bernardino.</Title>
+            <Title>Software engineer from Guatemala.</Title>
+            <Title>I create high-detailed & performant web apps.</Title>
+            <Title>I have collaborated with: <br />Saatchi & Saatchi, BBDO, Taco Bell & Starmedia.</Title>
+            <Title>Co-founder of <a href='https://royalestudios.com'>royalestudios</a>.</Title>
+            <Title>Currently, I live in Barcelona and <br /> work at Typeform.</Title>
             <Spacer />
           </Content>
         </Container>
@@ -30,9 +31,10 @@ const Index = (props) => {
       <OppositeWrap>
         <Container>
           <Content>
-            <Title>Creé el primer <a href='https://www.typeform.com/blog/human-experience/cui/'>artículo conversacional</a> del mundo. </Title>
-            <Title>Desarrollé una <a href='http://spotify-youtube.jepser.com'>aplicación</a> que convierte playlists the Spotify a Youtube.</Title>
-            <Title>Integré WooCommerce y Credomatic, <a href='http://jepser.com/labs/woocommerce-credomatic/'>creando un plugin</a> que hace posible los pagos en línea en Centro América.</Title>
+            <Title>I created the first <a href='https://www.typeform.com/blog/human-experience/cui/'>conversational article</a> in the world. </Title>
+            <Title>Launched <a href='https://labs.typeform.com/cui/'>a product</a> that creates a better data collection experience.</Title>
+            <Title>Developed an <a href='http://spotify-youtube.jepser.com'>application</a> that converts playlist from Spotify to Youtube.</Title>
+            <Title>Integrated WooCommerce and Credomatic by <a href='http://jepser.com/labs/woocommerce-credomatic/'>creating a plugin</a> that makes possible online payments in Central America.</Title>
           </Content>
         </Container>
       </OppositeWrap>
