@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {default as Wrapper} from '../Content'
+import { default as Wrapper } from '../Content'
 
 export const Title = styled.h1`
   font-weight: normal;
@@ -15,8 +15,7 @@ export const Title = styled.h1`
       display: block;
       position: absolute;
       width: 100%;
-      height: 4px;
-      background-color: white;
+      border-bottom: 4px solid;
     }
   }
 
@@ -28,7 +27,7 @@ export const Title = styled.h1`
 export const Spacer = styled.div`
   width: 200px;
   height: 5px;
-  background-color: ${props => props.theme == 'light' ? 'white' : '#333'};
+  background-color: ${props => props.theme === 'light' ? 'white' : '#333'};
 `
 
 export const Container = styled(Wrapper)`

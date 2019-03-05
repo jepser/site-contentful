@@ -20,15 +20,22 @@ const Index = (props) => {
           <Content>
             <Title>Hi, I am Jepser Bernardino.</Title>
             <Title>Software engineer from Guatemala.</Title>
-            <Title>I create high-detailed & performant web apps.</Title>
+            <Title>I craft high-detailed & performant <br/>web apps  using the latest technologies.</Title>
             <Title>I have collaborated with: <br />Saatchi & Saatchi, BBDO, Taco Bell & Starmedia.</Title>
-            <Title>Co-founder of <a href='https://royalestudios.com'>royalestudios</a>.</Title>
-            <Title>Currently, I live in Barcelona and <br /> work at Typeform.</Title>
             <Spacer />
           </Content>
         </Container>
       </Wrap>
       <OppositeWrap>
+        <Container>
+          <Content>
+            <Title>Co-founder of <a href='https://royalestudios.com'>royalestudios</a>.</Title>
+            <Title>Currently, I live in Barcelona 🏖. </Title>
+            <Title>Working at <a href='https://www.typeform.com'>Typeform.</a></Title>
+          </Content>
+        </Container>
+      </OppositeWrap>
+      <Wrap>
         <Container>
           <Content>
             <Title>I created the first <a href='https://www.typeform.com/blog/human-experience/cui/'>conversational article</a> in the world. </Title>
@@ -37,7 +44,7 @@ const Index = (props) => {
             <Title>Integrated WooCommerce and Credomatic by <a href='http://jepser.com/labs/woocommerce-credomatic/'>creating a plugin</a> that makes possible online payments in Central America.</Title>
           </Content>
         </Container>
-      </OppositeWrap>
+      </Wrap>
     </Page>
   )
 }
