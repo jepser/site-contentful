@@ -15,42 +15,27 @@ const Notice = () => {
       ·
       <br />
       <br />
-      <Paragraph strike>🇨🇴 Colombia en abril, speaker en JS Colombia meetup.</Paragraph>
-      <Paragraph strike>
-        🇪🇸 Madrid el 20 y 21 de abril, speaker en
-        {' '}
-        <a
-          href='https://2018.madrid.wordcamp.org/programa/'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          WordCamp Madrid
-        </a>
-        .
+      <Paragraph>📚</Paragraph>
+      <Paragraph>
+        <a href="https://dev.to/jepser/2-functions-that-made-my-components-responsive-10fb">2 functions that made my components responsive</a> at The practical dev.
       </Paragraph>
-      <Paragraph strike>
-        🇵🇹 Porto 18 y 19 de mayo, speaker en
-        {' '}
-        <a
-          href='https://2018.porto.wordcamp.org/'
-          target='_bank'
-          rel='noopener noreferrer'
-        >
-          WordCamp Porto
-        </a>
-        .
+      <Paragraph>
+        <a href="https://www.contentful.com/blog/2019/02/27/wordpress-move-contentful-static-site/">From WordPress to static site—the Contentful way</a> at Contentful's blog.
       </Paragraph>
-      <Paragraph strike>
-        🇵🇱 Polonia 4 y 5 de Diciembre, speaker en
-        <a
-          href='http://frontend-con.io/'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Frontend Connect
-        </a>.
+      <Paragraph>
+        <a href="https://www.typeform.com/blog/inside-story/coders-cut/">Coders Cut: The conversational article</a> at Typeform's blog.
       </Paragraph>
-      <Paragraph>Until next year.</Paragraph>
+      <Paragraph>📹</Paragraph>
+      <Paragraph>
+        <a href="https://www.youtube.com/watch?v=3IU2UPNn60M">The journey of a new interface</a> at Frontend Connect.
+      </Paragraph>
+      <Paragraph>
+        <a href="https://wordpress.tv/2018/05/16/jepser-bernardino-sitios-web-estaticos-con-wordpress-y-react/">Jepser Bernardino: Sitios web estáticos con WordPress y React</a> at WordPress.tv.
+      </Paragraph>
+      <Paragraph>
+        <a href="https://wordpress.tv/2018/04/22/jepser-bernardino-styled-components-por-que-css-en-javascript/">Jepser Bernardino: Styled components ¿Por qué css en javascript?</a> at WordPress.tv.
+      </Paragraph>
+      
     </Wrap>
   )
 }
