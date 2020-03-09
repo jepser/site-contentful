@@ -65,7 +65,6 @@ export default class MyDocument extends Document {
           />
           <GlobalStyle />
           {this.props.styleTags}
-          <!-- Hotjar Tracking Code for https://jepser.com -->
           <script>
               (function(h,o,t,j,a,r){
                   h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
