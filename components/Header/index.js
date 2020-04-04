@@ -1,9 +1,9 @@
+import PropTypes from 'prop-types'
 import Link from 'next/link'
 import ActiveLink from '../ActiveLink'
 
 import Logo from '../Logo'
 import {
-  Menu,
   Item,
   Wrap,
   MenuWrap
@@ -54,6 +54,10 @@ const Header = ({ theme }) => {
       </MenuWrap>
     </Wrap>
   )
+}
+
+Header.propTypes = {
+  theme: PropTypes.oneOf(['light', 'dark'])
 }
 
 export default Header
