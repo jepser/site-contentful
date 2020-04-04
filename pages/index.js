@@ -39,6 +39,7 @@ const Index = (props) => {
       <Wrap>
         <Container>
           <Content>
+            <Title>I developed a tracking tool for web-apps <a href='https://dev.to/jepser/hello-treacker-a-tracking-library-for-react-59bd'>meet Treacker</a>. </Title>
             <Title>I created the first <a href='https://www.typeform.com/blog/human-experience/cui/'>conversational article</a> in the world. </Title>
             <Title>Launched <a href='https://labs.typeform.com/cui/'>a product</a> that creates a better data collection experience.</Title>
             <Title>Developed an <a href='http://spotify-youtube.jepser.com'>application</a> that converts playlist from Spotify to Youtube.</Title>

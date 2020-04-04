@@ -1,3 +1,10 @@
 {
-    "extends": "standard"
+  "extends": [
+    "plugin:react/recommended",
+    "standard"
+  ],
+  "plugins": ["prettier"],
+  "rules": {
+    "react/react-in-jsx-scope": 0
+  }
 }

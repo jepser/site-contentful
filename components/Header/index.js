@@ -1,10 +1,6 @@
 import Link from 'next/link'
 import ActiveLink from '../ActiveLink'
 
-const makePopup = typeof document !== 'undefined'
-  ? require('@typeform/embed').makePopup
-  : null
-
 import Logo from '../Logo'
 import {
   Menu,
@@ -13,8 +9,11 @@ import {
   MenuWrap
 } from './styled-components'
 
-const Header = ({theme}) => {
+const makePopup = typeof document !== 'undefined'
+  ? require('@typeform/embed').makePopup
+  : null
 
+const Header = ({ theme }) => {
   let color = '#333'
   let background = 'white'
   if (theme === 'dark') {
@@ -23,12 +22,12 @@ const Header = ({theme}) => {
   }
 
   let popup = null
-  
+
   const showTypeform = (e) => {
     if (makePopup) {
       e.preventDefault()
 
-      if(!popup) {
+      if (!popup) {
         popup = makePopup('https://jepser.typeform.com/to/yQ1K0K', {
           mode: 'popup'
         })
@@ -37,7 +36,7 @@ const Header = ({theme}) => {
     }
   }
 
-  return(
+  return (
     <Wrap>
       <MenuWrap>
         <Link href="/">
