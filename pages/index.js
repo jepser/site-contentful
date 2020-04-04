@@ -31,7 +31,8 @@ const Index = (props) => {
           <Content>
             <Title>Co-founder of <a href='https://royalestudios.com'>royalestudios</a>.</Title>
             <Title>Currently, I live in Barcelona 🏖. </Title>
-            <Title>Working at <a href='https://badi.com'>Badi.</a></Title>
+            <Title>Teaching coding at <a href="https://codeop.tech/">CodeOp</a>.</Title>
+            <Title>Product engineer at <a href='https://badi.com'>Badi.</a></Title>
             <Title>Previously at <a href='https://www.typeform.com'>Typeform.</a></Title>
           </Content>
         </Container>
