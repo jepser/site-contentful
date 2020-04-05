@@ -13,7 +13,7 @@ const Index = (props) => {
   return (
     <Page
       title='Jepser Bernardino | Software engineer from Guatemala 🇬🇹'
-      description='Frontend engineer con 7 años de experiencia con tecnologías web. Escribo sobre frontend, sitios estáticos, React y performance, un poco de mi experincia con trabajo remoto y vida en Barcelona.'
+      description='Software engineer with 8 years of experience in web technologies. Currently product engineering at Badi. Teaching coding at CodeOp. Previously doing Frontend at Typeform.'
     >
       <Wrap>
         <Container>
