@@ -21,16 +21,16 @@ export const Preview = (props) => {
     excerpt,
     slug,
     color,
-    projectUrl,
+    projectUrl
   } = props.fields
 
   const {
     createdAt,
     id
   } = props.sys
-  
+
   const publishedDate = moment(createdAt).locale('es').format('MMMM Do, YYYY')
-  return(
+  return (
     <Wrap color={color}>
       <Content>
         <Item>
@@ -43,7 +43,7 @@ export const Preview = (props) => {
           <Excerpt>{excerpt}</Excerpt>
           <Meta>
             <ProjectLink href={`${projectUrl}`}>Ver proyecto</ProjectLink>
-            <Link href={`/article?slug=${slug}&type=labs`} as={`/labs/${slug}`} prefetch>
+            <Link href={`/article?slug=${slug}&type=labs`} as={`/labs/${slug}`}>
               <ContinueReading>Ver más</ContinueReading>
             </Link>
           </Meta>
@@ -53,10 +53,10 @@ export const Preview = (props) => {
   )
 }
 
-export const ArticleTitle = ({children}) => (
-    <TitleContent>
-      <MainTitle>{children}</MainTitle>
-    </TitleContent>
+export const ArticleTitle = ({ children }) => (
+  <TitleContent>
+    <MainTitle>{children}</MainTitle>
+  </TitleContent>
 )
 
 export default Labs
