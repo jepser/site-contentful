@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import logo from '../../static/jepser-logo-v2.svg'
+import logo from '../../public/jepser-logo-v2.svg'
 
 const Icon = styled(logo)`
   width: 40px;

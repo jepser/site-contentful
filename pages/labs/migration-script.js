@@ -177,7 +177,7 @@ class Index extends Component {
             </h4>
             <h4>4. Selecciona la base de datos del sitio que quieres migrar</h4>
             <h4>5. Ve a la Tab de SQL, pega el código y preciona "Go"</h4>
-            <img src='/static/migration-script/phpmyadmin.jpg' />
+            <img src='/migration-script/phpmyadmin.jpg' />
             <h4>
               6. Si tu base de datos está en local, exporta la base de datos, la importas en el sitio en producción y listo!
             </h4>
