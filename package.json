@@ -9,23 +9,9 @@
     "start": "next start",
     "export": "yarn build && next export",
     "now-build": "next build && next export",
-    "deploy-now": "now ./out --public --token $NOW_TOKEN -e NODE_ENV=production --confirm",
+    "deploy-now": "now --token $NOW_TOKEN -e NODE_ENV=production --confirm --prod",
     "alias": "now alias --token=$NOW_TOKEN --confirm",
     "semantic-release": "semantic-release"
-  },
-  "now": {
-    "name": "out",
-    "alias": [
-      "jepser.com",
-      "www.jepser.com"
-    ],
-    "version": 2,
-    "builds": [
-      {
-        "src": "package.json",
-        "use": "@now/static-build"
-      }
-    ]
   },
   "release": {
     "verifyConditions": [
