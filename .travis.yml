@@ -4,7 +4,7 @@ node_js:
 cache: yarn
 script:
 - yarn export
-- yarn deploy-now
+- yarn deploy-now --prod
 after_success:
   - yarn alias
   - yarn semantic-release
