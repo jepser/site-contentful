@@ -12,7 +12,7 @@ import {
 const Index = (props) => {
   return (
     <Page
-      title='Jepser Bernardino | Software engineer from Guatemala 🇬🇹'
+      title='Jepser Bernardino | product engineer from Guatemala 🇬🇹'
       description='Software engineer with 8 years of experience in web technologies. Currently product engineering at Badi. Teaching coding at CodeOp. Previously doing Frontend at Typeform.'
     >
       <Wrap>
