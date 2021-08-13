@@ -35,7 +35,7 @@
     "isomorphic-fetch": "^2.2.1",
     "marksy": "^6.0.3",
     "moment": "^2.19.1",
-    "next": "^9.3.4",
+    "next": "^11.1.0",
     "raw-loader": "^0.5.1",
     "react": "^16.13.1",
     "react-cui": "^1.0.4",
