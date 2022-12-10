@@ -31,7 +31,7 @@
     "contentful": "5.0.5",
     "dotenv": "^4.0.0",
     "es6-promise": "^4.1.1",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "isomorphic-fetch": "^2.2.1",
     "marksy": "^6.0.3",
     "moment": "^2.19.1",
